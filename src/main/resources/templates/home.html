@@ -2,82 +2,32 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Registration Success</title>
-<link rel="stylesheet" type="text/css" href="drop_down_menu.css" />
+<title></title>
 <link rel="stylesheet" type="text/css"
 	href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<body style="background: url(image/bank.jpg)">
-	<div class="container text-center">
-		<h6>Login successfully!</h6>
-	</div>
-	<div class="menu-bar">
-		<ul>
-			<li class="active"><a href="#">My Account</a>
-				<div class="sub-menu-1">
-					<ul>
-						<li><a th:href="@{/viewprofile}">View Profile</a></li>
 
+<div class="container text-center">
 
+	<h2>welcome!!</h2>
+<br>
+	
+	<h5>
 
-					</ul>
-
-				</div></li>
-			<li><a href="#">Account summary</a>
-				<div class="sub-menu-1">
-					<ul>
-						<li><a th:href="@{/viewbalance}">Check Balnce</a></li>
-						<li><a th:href="@{/transaction_History}">View Transactions</a></li>
-						<li><a th:href="@{/transfer}">Transfer money</a></li>
-
-
-					</ul>
-
-				</div></li>
-			<li><a href="#">Languages</a>
-				<div class="sub-menu-1">
-					<ul>
-						<li><a href="#">Telugu</a></li>
-						<li><a href="#">English</a></li>
-						<li><a href="#">Hindhi</a></li>
-
-
-					</ul>
-
-				</div></li>
-
-			<li><a href="#">services</a>
-				<div class="sub-menu-1">
-					<ul>
-						<li><a href="#">Personal Loan</a></li>
-						<li><a href="#">Car Loan</a></li>
-						<li><a href="#">Gold Loan</a></li>
-						<li><a href="#">Home Loan</a></li>
-						<li><a href="#">credit card</a></li>
-
-
-
-					</ul>
-
-				</div></li>
-			<li><a th:href="@{/logout}">logout</a></li>
-
-		</ul>
-	</div>
-	<!--  <p>
-		Your account Number Is: <span th:text="${Customer.accountnumber}"></span>
-	</p>-->
-
-	<!-- <p>
-			Your account Number Is: <span th:text="${accountNumber}"></span>
-		</p> 
-	<h4>
-		<a th:href="@{/logout}">Click here to Logout</a>
-	</h4>-->
-	<!--  <a th:href="@{menupage}">click</a>-->
-
-
-
+	<a th:href="@{/add-professor}">Add professor</a>
+	<br>
+	<a th:href="@{/add-department}">Add department</a>
+	<br>
+	<a th:href="@{/add-subject}">Add Subject</a>
+		
+	</h5>
+	
+</div>
 </body>
 </html>

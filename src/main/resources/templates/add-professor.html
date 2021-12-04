@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="astrich.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- <div class="container text-center"> -->
+	<form style="position: absolute;
+left: 400px;
+margin: 20px;
+width : 700px;
+padding: 16px;
+background-color:skyblue;" id="createaccount">
+<div class="m-0 p-0 bg-dark text-light text-center d-flex align-items-center justify-content-center" 
+style="height: 50px; font-size: 25px;">Add Professor</div>
+<div class="container text-center">
+
+		<form action="#" th:action="@{/process}" th:object="${professorDTO}"
+			method="post">
+			<div class="required-field">Name:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{name}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">Faher name:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{father_name}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">Age:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{age}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">Village:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{village}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">Mandal:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{mandal}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">District:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{district}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">State:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<input type="text" th:field="*{state}" class="form-control"
+						style="width: 300px;" required />
+				</div>
+			</div>
+			<div class="required-field">Languages known:</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+
+
+					<label class="col-4 col-form-label"></label> <input type="checkbox"
+						name="language1" value="Telugu" th:field="*{language_name}">Telugu
+
+					<input type="checkbox" name="language2" value="English"
+						th:field="*{language_name}">English <input type="checkbox"
+						name="language3" value="Hindhi" th:field="*{language_name}">Hindhi
+				</div>
+			</div>
+			<div class="required-field">select Department:</div>
+
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<div class="form-group row" style="width: 300px;">
+
+						<select th:field="*{department_Id}" class="form-control">
+							<!-- <option value="">Select department</option> -->
+							<option th:each="professor : ${departmentList}"
+								th:value="${professor.id}"
+								th:text="${professor.department_name}"></option>
+						</select> <br>
+					</div>
+				</div>
+			</div>
+			<div class="required-field">Select Subject:</div>
+
+			<div class="form-group row">
+				<label class="col-4 col-form-label"></label>
+				<div class="col-8">
+					<div class="form-group row" style="width: 300px;">
+
+						<select multiple="multiple" th:field="*{subjectsId}"
+							class="form-control">
+							<!-- <option value="">Select department</option> -->
+							<option th:each="subject : ${list}"
+								th:value="${subject.subject_id}"
+								th:text="${subject.subject_name}"></option>
+						</select> <br><br>
+						<br>
+						<button type="submit" class="btn btn-primary">add</button>
+					</div>
+				</div>
+			</div>
+
+			<br >
+
+		</form>
+		</div>
+		</form>
+	
+
+</body>
+</html>
